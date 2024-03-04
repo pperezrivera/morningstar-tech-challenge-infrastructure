@@ -1,5 +1,11 @@
-locals{
+terraform {
+  cloud {
+    organization = "morningstar_tech_challenge"
 
+    workspaces {
+      name = "tech_challenge"
+    }
+  }
 }
 
 ## need to create the vpc, subnets, internet gateway
